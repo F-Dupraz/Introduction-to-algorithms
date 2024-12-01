@@ -29,12 +29,16 @@ int main(void)
 		return 1;
 	}
 
-	for(int k = 0; k <= SIZE; ++k)
+	for(int k = 0; k < SIZE; ++k)
 		unsorted_array[k] = arr[k];
 
 	insertion_sort(unsorted_array, SIZE);
 
 	for(int k = 0; k < SIZE; ++k)
 		printf(" %d", unsorted_array[k]);
+
+	free(unsorted_array);
+
+	return 0;
 }
 
