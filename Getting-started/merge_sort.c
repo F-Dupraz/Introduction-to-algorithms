@@ -8,7 +8,7 @@ int arr[SIZE] = {7, 6, 45, 84, 87, 94, 95, 96, 97, 32, 14, 56, 89, 21, 8, 39, 1,
 void merge(int *A, int p, int q, int r)
 {
   int nL = q - p + 1;
-  int nR = r - q;
+  int nR = r - q; 
   int *L = (int*)malloc(nL * sizeof(int));
   int *R = (int*)malloc(nR * sizeof(int));
 
