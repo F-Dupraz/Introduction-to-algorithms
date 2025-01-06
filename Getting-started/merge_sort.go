@@ -1,4 +1,4 @@
-package main
+package merge_sort
 
 import "fmt"
 
@@ -16,7 +16,7 @@ const SIZE int = 100
 func merge(left, right []int) []int {
 	var result []int
 	result = make([]int, 0, len(left)+len(right))
-	
+
 	var i int = 0
 	var j int = 0
 	for i < len(left) && j < len(right) {
@@ -28,11 +28,11 @@ func merge(left, right []int) []int {
 			j++
 		}
 	}
-	
+
 	result = append(result, left[i:]...)
-	
+
 	result = append(result, right[j:]...)
-	
+
 	return result
 }
 
@@ -40,11 +40,11 @@ func merge_sort(arr []int) []int {
 	if len(arr) <= 1 {
 		return arr
 	}
-	
+
 	var mid int = len(arr) / 2
 	var left []int = merge_sort(arr[:mid])
 	var right []int = merge_sort(arr[mid:])
-	
+
 	return merge(left, right)
 }
 
@@ -57,4 +57,3 @@ func main() {
 		fmt.Printf(" %d", v)
 	}
 }
-

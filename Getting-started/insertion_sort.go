@@ -1,4 +1,4 @@
-package main
+package insertion_sort
 
 import "fmt"
 
@@ -9,10 +9,10 @@ func insertion_sort(A []int, n int) {
 		var key int = A[i]
 		var j int = i - 1
 		for j >= 0 && A[j] > key {
-			A[j + 1] = A[j]
+			A[j+1] = A[j]
 			j--
 		}
-		A[j + 1] = key
+		A[j+1] = key
 	}
 }
 
@@ -25,4 +25,3 @@ func main() {
 		fmt.Printf(" %d", unsorted_array[k])
 	}
 }
-
