@@ -9,7 +9,7 @@ void bubble_sort(int *A, int n)
 {
   for(int i = 0; i < n; ++i)
   {
-    for(int j = n; j > i; --j)
+    for(int j = n-1; j > i; --j)
     {
       if(A[j] < A[j-1])
       {
